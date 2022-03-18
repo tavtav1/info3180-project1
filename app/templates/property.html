@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+
+
+<body>
+	{% block main%}
+
+	<img src="{{url_for('get_image', filename= propertypost.photo_name )}} " width = "200">
+
+	{{propertypost.property_title}}<br>
+	{{propertypost.description}}<br>
+
+
+
+
+	{% endblock %}
+</body>
+
+</html>

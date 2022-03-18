@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+
+
+<body>
+	{% block main%}
+
+	<h1>Propert</h1>
+
+	{%for x in propertiespost %}
+
+		<img src="{{url_for('get_image', filename= x.photo_name )}} " width = "200">
+
+		{{x.property_title}}<br>
+		{{x.description}}<br>
+
+		<a href="{{url_for('property', propertyid = x.id)}}"> Linke</a>
+
+
+
+	{% endfor %}
+
+
+	{% endblock %}
+</body>
+
+</html>

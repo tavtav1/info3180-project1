@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	{% block main%}
+
+	<form action="{{ url_for('create') }}" method="POST" enctype="multipart/form-data">
+		{{form.csrf_token}}
+
+		<h1>Add New Property</h1>
+
+		{{form.title.label}}
+		{{form.title}}
+
+		<br>
+
+		{{form.description.label}}
+		{{form.description}}
+		<br>
+
+		{{form.bedrooms.label}}
+		{{form.bedrooms}}
+		<br>
+
+		{{form.bathrooms.label}}
+		{{form.bathrooms}}
+		<br>
+
+		{{form.price.label}}
+		{{form.price}}
+		<br>
+
+		{{form.ptype.label}}
+		{{form.ptype}}
+		<br>
+
+		{{form.location.label}}
+		{{form.location}}
+		<br>
+
+		{{form.photo.label}}
+		{{form.photo}}
+		<br>
+
+		<input type="Submit" value='Add Property'>
+
+	</form>
+
+	{% endblock %}
+		
+
+
+</body>
+</html>
