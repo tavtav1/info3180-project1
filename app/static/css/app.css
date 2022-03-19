@@ -1,3 +1,191 @@
 body {
     padding-top: 5rem;
+    background-color: lightgrey;
 }
+
+.flex-container{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+
+.box{
+    width: 200px;
+    height: 280px;
+    background: white;
+    margin: 20px;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+@media screen and (max-width: 1200px){
+    .box{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .box{
+        width: 40%;
+    }
+}
+
+.pricebttn{
+        pointer-events: none;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        padding: 3px;
+        padding-right: 5px;
+        }
+
+.typebttn{
+    pointer-events: none;
+    background-color: darkorange;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+    padding-right: 5px;
+}
+
+.realtorbuttn{
+    padding: 3px;
+    border-radius: 5px;
+    border: none;
+    background-color: green;
+    color: white;
+    padding-right: 5px;
+}
+
+.viewpropertybttn{
+    width: 100%;
+    border: none;
+    height: 30px;
+    background-color: darkblue;
+    color: white;
+
+}
+
+img{
+    width: 100%;
+}
+
+.info{
+    padding:10px;
+    padding-bottom: 15px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: white;
+    padding: 10px;
+}
+
+.grid1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 5px;
+}
+
+.grid2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 5px;
+}
+
+.grid3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 5px;
+}
+
+.grid4{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 5px;
+}
+
+.grid5{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 5px;
+}
+
+.grid6{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 5px;
+}
+
+.grid7{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 5px;
+}
+
+.grid8{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 5px;
+}
+
+.grid9{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 5px;
+}
+
+.grid9 input{
+    background-color: deeppink;
+    border: none;
+    color: white;
+    padding: 5px;
+}
+
+.form-control{
+    width: 80%;
+}
+
+.property-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: white;
+}
+
+.property-grid1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.property-grid2{
+    padding: 10px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.property-img{
+    width: 100%;
+    height: 100%;
+}
+
+.roomsinfo{
+    font-style: italic;
+}
+
+.locinfo{
+    color: darkgrey;
+    font-style: italic;
+}
+
+.tab{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+

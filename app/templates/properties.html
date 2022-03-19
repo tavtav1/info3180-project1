@@ -9,25 +9,39 @@
 
 
 <body>
+	
 	{% block main%}
+	<h1>Properties</h1>
 
-	<h1>Propert</h1>
+	<div class="flex-container">
 
-	{%for x in propertiespost %}
+		{%for x in propertiespost %}
+			<div class = "box">
 
-		<img src="{{url_for('get_image', filename= x.photo_name )}} " width = "200">
+			<img src="{{url_for('get_image', filename= x.photo_name )}} " width = "200">
 
-		{{x.property_title}}<br>
-		{{x.description}}<br>
+			<div class="info">
+				
+				<h6>{{x.property_title}}</h6>
 
-		<a href="{{url_for('property', propertyid = x.id)}}"> Linke</a>
+				<p>{{x.loc}}</p>
+
+				<button class="pricebttn">{{x.price}}</button>
 
 
+			</div>
 
-	{% endfor %}
 
+			<button type="button" class ="viewpropertybttn" onclick="window.location.href='{{url_for('property', propertyid = x.id)}}';">View Property</button>
+			
 
+	</div>
+
+		{% endfor %}
+
+</div>
 	{% endblock %}
+
 </body>
 
 </html>

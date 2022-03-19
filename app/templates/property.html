@@ -4,20 +4,35 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<title></title>
+
 </head>
 
 
 <body>
 	{% block main%}
 
-	<img src="{{url_for('get_image', filename= propertypost.photo_name )}} " width = "200">
+	<div class="property-grid"> 
+		<div class="property-grid1">
+			<img class ="property-img"src="{{url_for('get_image', filename= propertypost.photo_name )}} " width = "200">
+		</div> <!-- End of property grid 1 -->
 
-	{{propertypost.property_title}}<br>
-	{{propertypost.description}}<br>
+		<div class="property-grid2">
+			<i class="fas fa-clock"></i>
+			<h2>{{propertypost.property_title}}</h2>
+			<button class="pricebttn">{{propertypost.price}}</button>
+			<span class="tab"></span>
+			<button class="typebttn">{{propertypost.property_type}}</button>
+			<p> {{propertypost.description}} </p>
+			<p class= "roomsinfo"> {{propertypost.no_of_bedrooms}} Bedrooms <span class="tab"></span>{{propertypost.no_of_bathrooms}} Bathrooms </p>
+			<p class="locinfo"> {{propertypost.loc}} </p>
+			<button class="realtorbuttn">Email Realtor</button>
+	
 
-
-
+		</div> <!-- End of property grid 2 -->
+	</div> <!-- End of property-grid -->
+	
 
 	{% endblock %}
 </body>

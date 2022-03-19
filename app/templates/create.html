@@ -14,46 +14,55 @@
 
 		<h1>Add New Property</h1>
 
-		{{form.title.label}}
-		{{form.title}}
+		<div class="grid-container">
 
-		<br>
+			<div class = "grid1">
+				<h6>{{form.title.label}}</h6>
+				{{form.title(class_="form-control")}}
+			</div>
 
-		{{form.description.label}}
-		{{form.description}}
-		<br>
+			<div class = "grid2">
+				<h6>{{form.description.label}}</h6>
+				{{form.description(class_="form-control")}}
+			</div>
 
-		{{form.bedrooms.label}}
-		{{form.bedrooms}}
-		<br>
+			<div class = "grid3">
+				<h6>{{form.bedrooms.label}}</h6>
+				{{form.bedrooms(class_="form-control")}}
+			</div>
 
-		{{form.bathrooms.label}}
-		{{form.bathrooms}}
-		<br>
+			<div class = "grid4">
+				<h6>{{form.bathrooms.label}}</h6>
+				{{form.bathrooms(class_="form-control")}}
+			</div>
 
-		{{form.price.label}}
-		{{form.price}}
-		<br>
+			<div class = "grid5">
+				<h6>{{form.price.label}}</h6>
+				{{form.price(class_="form-control")}}
+			</div>
 
-		{{form.ptype.label}}
-		{{form.ptype}}
-		<br>
+			<div class = "grid6">
+				<h6>{{form.ptype.label}}</h6>
+				{{form.ptype(class_="form-control")}}
+			</div>
 
-		{{form.location.label}}
-		{{form.location}}
-		<br>
+			<div class = "grid7">
+				<h6>{{form.location.label}}</h6>
+				{{form.location(class_="form-control")}}
+			</div>
 
-		{{form.photo.label}}
-		{{form.photo}}
-		<br>
+			<div class = "grid8">
+				<h6>{{form.photo.label}}</h6>
+				{{form.photo}}
+			</div>
+			<div class = "grid9">
+				<input type="Submit" value='Add Property'>
+			</div>
 
-		<input type="Submit" value='Add Property'>
-
+		</div>
 	</form>
 
 	{% endblock %}
-		
-
 
 </body>
 </html>
